@@ -1,0 +1,15 @@
+{
+  "name": "piportal-backend",
+  "version": "1.0.0",
+  "description": "Backend for PiPortal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "redis": "^4.6.10",
+    "body-parser": "^1.20.2"
+  }
+} 

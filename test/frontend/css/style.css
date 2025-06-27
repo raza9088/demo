@@ -1,0 +1,106 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #002366;
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('https://www.pinetwork.com/wp-content/uploads/2023/12/Pi-Day-2023-Art-Banner-Mobile-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.cta-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-buttons button.primary {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.cta-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.cta-buttons button.primary:hover {
+    background-color: #e0a800;
+}
+
+.widgets {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.widget {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.widget h3 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+} 

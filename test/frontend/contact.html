@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support - PiPortal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PiPortal</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="cta-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Contact & Support</h2>
+        <div class="contact-grid">
+            <div>
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq">
+                    <h4>How does the 5-hour mining session work?</h4>
+                    <p>Instead of a 24-hour cycle, PiPortal uses a 5-hour cycle to encourage more frequent engagement. You can start a new session from the dashboard.</p>
+                    <h4>What is KYC and why is it required?</h4>
+                    <p>KYC (Know Your Customer) is a verification process required by the Pi Network to ensure that all pioneers are real human beings. It's necessary for transferring your mined Pi to the mainnet.</p>
+                    <h4>How are referral bonuses calculated?</h4>
+                    <p>Referral bonuses increase your mining rate based on the number of active members in your earning team.</p>
+                </div>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div style="margin-top: 1rem;">
+                    <p>You can also find us on:</p>
+                    <p><strong>Pi Browser Chat:</strong> pi://chat.pi/PiPortal</p>
+                    <p><strong>Social Media:</strong> [Links to be added]</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PiPortal. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

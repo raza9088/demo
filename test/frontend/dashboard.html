@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PiPortal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #002366;
+            margin-top: 0;
+        }
+        #session-timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        #start-session-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .log-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .log-table th, .log-table td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PiPortal</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="cta-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>Mining Session</h3>
+                <div id="session-timer">05:00:00</div>
+                <button id="start-session-btn">Start Session</button>
+            </div>
+
+            <div class="card">
+                <h3>AI Insights</h3>
+                <p><strong>Recommended Start Time:</strong> 10:00 PM</p>
+                <p><strong>Estimated Rewards:</strong> 1.2 Pi</p>
+                <p>Based on our analysis of global network activity, starting your next session around 10:00 PM will likely yield higher rewards.</p>
+            </div>
+
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>Session Log</h3>
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Duration</th>
+                            <th>Earned Pi</th>
+                            <th>Multiplier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-07-28</td>
+                            <td>5 hours</td>
+                            <td>0.51 Pi</td>
+                            <td>x1.25</td>
+                        </tr>
+                        <tr>
+                            <td>2024-07-27</td>
+                            <td>5 hours</td>
+                            <td>0.48 Pi</td>
+                            <td>x1.20</td>
+                        </tr>
+                        <tr>
+                            <td>2024-07-26</td>
+                            <td>5 hours</td>
+                            <td>0.55 Pi</td>
+                            <td>x1.30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PiPortal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mock countdown timer
+        const timerDisplay = document.getElementById('session-timer');
+        const startBtn = document.getElementById('start-session-btn');
+        let countdown;
+
+        function startTimer(duration) {
+            let timer = duration, hours, minutes, seconds;
+            countdown = setInterval(() => {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                timerDisplay.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(countdown);
+                    timerDisplay.textContent = "Session Over";
+                    startBtn.disabled = false;
+                }
+            }, 1000);
+        }
+        
+        startBtn.addEventListener('click', () => {
+            const fiveHours = 5 * 60 * 60;
+            startTimer(fiveHours);
+            startBtn.disabled = true;
+        });
+
+    </script>
+</body>
+</html> 
